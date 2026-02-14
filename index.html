@@ -1,61 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>A House For You 🤍</title>
+<title>The Empire of J 🤎</title>
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<audio id="music" loop>
-  <source src="sparks.mp3" type="audio/mpeg">
-</audio>
+<div class="loading-screen">
+  <h1>Building Your Love Empire...</h1>
+  <div class="heart-loader">💗</div>
+</div>
 
-<button class="music-btn" onclick="toggleMusic()">♫</button>
-
-<div class="sparkle-bg"></div>
-
-<section class="intro">
-  <h1 class="fade">Welcome Home, J 🤎</h1>
-  <p class="fade">This little pink house was built for you.</p>
-  <button onclick="enterHouse()">Open the Door</button>
+<section class="portal hidden">
+  <h1>Welcome, J 🤍</h1>
+  <p>You are entering a digital empire built entirely from love.</p>
+  <a href="empire.html"><button>Enter The Empire</button></a>
 </section>
 
-<section id="house" class="hidden">
+<script>
+setTimeout(()=>{
+  document.querySelector(".loading-screen").style.display="none";
+  document.querySelector(".portal").classList.remove("hidden");
+},3000);
+</script>
 
-  <h2 class="house-title">🏡 Our House</h2>
+</body>
+</html>
 
-  <div class="room">
-    <h3>🛋 Living Room</h3>
-    <p>Beige mornings. Brown comfort. Green eyes that feel like safety.</p>
-  </div>
-
-  <div class="room">
-    <h3>🛏 Bedroom (Poetry Room)</h3>
-    <p id="typewriter"></p>
-  </div>
-
-  <div class="room">
-    <h3>🍰 Kitchen (Playful Room)</h3>
-    <button onclick="generateReason()">Why I Love You</button>
-    <p id="reason"></p>
-  </div>
-
-  <div class="room">
-    <h3>📷 Memory Wall</h3>
-    <div class="gallery">
-      <div class="photo">You</div>
-      <div class="photo">Me</div>
-      <div class="photo">Us</div>
-    </div>
-  </div>
-
-  <div class="room">
-    <h3>🌿 Future Garden</h3>
-    <p>
-      One day we’ll have soft mornings,
-      plants by the window,
-      quiet safety,
-      and a love that fe
